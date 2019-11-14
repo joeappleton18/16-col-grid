@@ -1,0 +1,73 @@
+@use "sass:meta";
+
+/** vars **/
+
+$grid_cols: 16;
+$max_width: 100%;
+$gutter: 25px;
+$col_1_width: $max_width / $grid_cols;
+$sm: 540px;
+
+/** Core  ***/
+.row {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding-right: $gutter;
+  border: 1px solid red;
+}
+
+[class*="col-"]:last-of-type {
+  padding-right: 0;
+}
+
+/** Functions **/
+@mixin grid($type, $size:false) {
+  @for $i from 1 through $grid_cols {
+    @if $size {
+      .#{$type}-#{$size}-#{$i} {
+        width: $col_1_width * $i;
+      }
+    } @else {
+      .#{$type}-#{$i} {
+        width: $col_1_width * $i;
+      }
+    }
+  }
+}
+
+@mixin generate_grid($sizes...) {
+  @include grid('col');
+  @each $name, $size in meta.keywords($sizes) {
+    @media(min-width: $size) {
+      @include grid('offset', $name);
+      @include grid('col', $name);
+    }
+  }
+
+
+}
+@include generate_grid($sm : 540px, $md: 720px, $lg: 1100px );
+
+
+/**
+ CSS 
+**/
+.wrapper {
+  width: 85%;
+  display: table;
+  margin: 0 auto;
+  background: linear-gradient(#ffffff, #e8e8e4 99%);
+  text-align: justify;
+}
+
+
+.blue {
+  background-color: blue;
+}
+
+

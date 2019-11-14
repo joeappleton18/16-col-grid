@@ -1,0 +1,32 @@
+Arguments: 
+  /Users/joeappleton/.nvm/versions/node/v8.16.1/bin/node /usr/local/bin/yarn init
+
+PATH: 
+  /Users/joeappleton/.nvm/versions/node/v8.16.1/bin:/Users/joeappleton/Library/Android/sdk:/usr/local/opt/php@7.0/sbin:/Users/joeappleton/Library/Android/sdk/tools:/usr/local/opt/php@7.0/bin:/usr/local/opt/mysql@5.7/bin:/Applications/mongo/bin:/Users/joeappleton/Library/Android/sdk/emulator:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/joeappleton/.nvm/versions/node/v8.16.1/bin:/Users/joeappleton/Library/Android/sdk:/usr/local/opt/php@7.0/sbin:/Users/joeappleton/Library/Android/sdk/tools:/usr/local/opt/php@7.0/bin:/usr/local/opt/mysql@5.7/bin:/Applications/mongo/bin
+
+Yarn version: 
+  1.9.2
+
+Node version: 
+  8.16.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/joeappleton/Downloads/a-very-simple-responsive-website-based-on-a-mobile-first-responsive-grid/package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:92:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:103:13
+      at <anonymous>
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
